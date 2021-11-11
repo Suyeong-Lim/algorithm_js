@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>출력결과</title>
+  </head>
+  <body>
+    <script>
+      //오름차순으로 정렬해서 첫번째 값 빼고 스플라이스로 잘라주었습니다.
+      function solution(arr) {
+        arr.sort(function (a, b) {
+          return a - b;
+        });
+        arr.splice(1, 6);
+        console.log(arr);
+      }
+
+      let arr = [5, 3, 7, 11, 2, 15, 17];
+      console.log(solution(arr));
+    </script>
+  </body>
+</html>

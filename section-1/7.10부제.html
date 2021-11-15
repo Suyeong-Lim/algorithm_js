@@ -6,8 +6,13 @@
   <body>
     <script>
       function solution(day, arr) {
-        let car = arr.filter((car) => car % 10 === day);
-        answer = car.length;
+        let count = 0;
+
+        for (let i of arr) {
+          if (i % 10 === day) count++;
+        }
+        answer = count;
+
         return answer;
       }
 

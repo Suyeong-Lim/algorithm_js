@@ -3,16 +3,14 @@ function solution(arr) {
   let cnt = 0;
   for (let i = 0; i < arr.length; i++) {
     if (arr[i] === 1) {
-      score++;
-      cnt += score;
-      //console.log(i);
-      console.log(score);
+      cnt++;
+      score += cnt;
     } else {
-      score = 0;
+      cnt = 0;
     }
   }
 
-  return cnt;
+  return score;
 }
 
 let arr = [1, 0, 1, 1, 1, 0, 0, 1, 1, 0];

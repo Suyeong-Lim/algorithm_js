@@ -1,12 +1,20 @@
 function solution(s) {
   s = s.toUpperCase();
-  let half = Math.floor(s.length / 2);
   let answer = "YES";
-  for (let i = 0; i < half; i++) {
-    if (s[i] !== s[s.length - i - 1]) return "NO";
+
+  //1. 반복문으로 비교하기
+  // for (let i = 0; i < s.length / 2; i++) {
+  //   if (s[i] !== s[s.length - 1 - i]) {
+  //     answer = "NO";
+  //   }
+  // }
+
+  //2. 내장함수 이용하여 비교하기
+  if (s.split("").reverse().join("") !== s) {
+    answer = "NO";
   }
   return answer;
 }
 
-let str = "gooG";
+let str = "goog";
 console.log(solution(str));

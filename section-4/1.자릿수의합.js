@@ -2,7 +2,7 @@ function solution(n, arr) {
   let answer;
   let max = Number.MIN_SAFE_INTEGER;
   let sum = 0;
-  sumArr = [];
+
   for (let i = 0; i < arr.length; i++) {
     let temp = arr[i];
     sum = 0;
@@ -10,7 +10,7 @@ function solution(n, arr) {
       sum += temp % 10;
       temp = Math.floor(temp / 10);
     }
-    sumArr.push(sum);
+
     if (max < sum) {
       max = sum;
       answer = arr[i];

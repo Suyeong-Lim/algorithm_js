@@ -1,21 +1,18 @@
 function solution(n, arr) {
-  let answer;
   let max = Number.MIN_SAFE_INTEGER;
-  let sum = 0;
-
-  for (let i = 0; i < arr.length; i++) {
-    let temp = arr[i];
-    sum = 0;
+  let answer;
+  for (x of arr) {
+    let sum = 0;
+    let temp = x;
     while (temp) {
       sum += temp % 10;
-      temp = Math.floor(temp / 10);
-    }
-
-    if (max < sum) {
-      max = sum;
-      answer = arr[i];
-    } else if (sum === max) {
-      if (arr[i] > answer) answer = arr[i];
+      temp = parseInt(temp / 10);
+      if (sum > max) {
+        max = sum;
+        answer = x;
+      } else if (sum === max) {
+        if (x > answer) answer = x;
+      }
     }
   }
 

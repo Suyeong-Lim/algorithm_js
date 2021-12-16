@@ -5,13 +5,14 @@ function solution(m, arr) {
 
   for (let rt = 0; rt < arr.length; rt++) {
     sum += arr[rt];
-    if ((sum = m)) answer++;
+    if (sum === m) {
+      answer++;
+    }
     while (sum >= m) {
       sum -= arr[lt++];
       if (sum === m) answer++;
     }
   }
-
   return answer;
 }
 

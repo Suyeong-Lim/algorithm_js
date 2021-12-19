@@ -14,6 +14,7 @@ function solution(str1, str2) {
     if (!sH.has(x) || sH.get(x) < 1) {
       return "No";
     }
+    /*⭐️ */
     sH.set(x, sH.get(x) - 1);
   }
 

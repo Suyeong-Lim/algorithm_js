@@ -6,15 +6,10 @@ function solution(m, arr) {
 
   for (let rt = 0; rt < n; rt++) {
     sum += arr[rt];
-    if (sum <= m) {
-      answer += rt - lt + 1;
-    }
     while (sum > m) {
       sum -= arr[lt++];
-      if (sum <= m) {
-        answer += rt - lt + 1;
-      }
     }
+    answer += rt - lt + 1;
   }
   return answer;
 }

@@ -11,12 +11,15 @@ function solution(s) {
     }
   }
 
-  for (let [key, val] of sh) {
-    if (val > max) {
-      max = val;
-      answer = key;
+  for (let [k, v] of sh) {
+    if (v > max) {
+      max = v;
+      answer = k;
     }
   }
+
+  console.log(sh);
+
   return answer;
 }
 

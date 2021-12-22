@@ -1,16 +1,17 @@
 function solution(m, arr) {
-  let answer = 0,
-    lt = 0,
-    sum = 0;
+  let answer = 0;
+  let lt = 0;
+  let sum = 0;
+  let n = arr.length;
 
-  for (let rt = 0; rt < arr.length; rt++) {
+  for (let rt = 0; rt < n; rt++) {
     sum += arr[rt];
-    if (sum === m) {
-      answer++;
-    }
+
     while (sum >= m) {
+      if (sum === m) {
+        answer++;
+      }
       sum -= arr[lt++];
-      if (sum === m) answer++;
     }
   }
   return answer;

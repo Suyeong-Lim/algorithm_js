@@ -10,12 +10,13 @@ function solution(arr1, arr2) {
   arr2.sort((a, b) => a - b);
 
   while (p1 < n && p2 < m) {
-    if (arr1[p1] < arr2[p2]) {
+    if (arr1[p1] === arr2[p2]) {
+      answer.push(arr1[p1]);
+      p1++;
+      p2++;
+    } else if (arr1[p1] < arr2[p2]) {
       p1++;
     } else if (arr1[p1] > arr2[p2]) {
-      p2++;
-    } else if (arr1[p1] === arr2[p2]) {
-      answer.push(arr1[p1++]);
       p2++;
     }
   }
@@ -23,6 +24,6 @@ function solution(arr1, arr2) {
   return answer;
 }
 
-let a = [1, 3, 9, 5, 2];
-let b = [3, 2, 5, 7, 8];
+let a = [1, 3, 9, 4, 2];
+let b = [3, 2, 4, 9, 8];
 console.log(solution(a, b));

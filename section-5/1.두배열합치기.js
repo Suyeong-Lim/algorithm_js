@@ -12,9 +12,11 @@ function solution(arr1, arr2) {
       answer.push(arr2[p2++]);
     }
   }
+
   while (p1 < n) {
     answer.push(arr1[p1++]);
   }
+
   while (p2 < m) {
     answer.push(arr2[p2++]);
   }

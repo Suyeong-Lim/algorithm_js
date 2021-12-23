@@ -1,9 +1,9 @@
 function solution(m, arr) {
-  let answer = 0,
-    sum = 0,
-    lt = 0;
+  let answer = 0;
+  let lt = 0;
+  let rt = 0;
   let n = arr.length;
-
+  let sum = 0;
   for (let rt = 0; rt < n; rt++) {
     sum += arr[rt];
     while (sum > m) {
@@ -14,5 +14,5 @@ function solution(m, arr) {
   return answer;
 }
 
-let a = [1, 1, 1, 1];
+let a = [1, 3, 1, 2, 3];
 console.log(solution(5, a));

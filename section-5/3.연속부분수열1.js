@@ -6,7 +6,6 @@ function solution(m, arr) {
 
   for (let rt = 0; rt < n; rt++) {
     sum += arr[rt];
-
     while (sum >= m) {
       if (sum === m) {
         answer++;

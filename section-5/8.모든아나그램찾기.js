@@ -1,20 +1,47 @@
-function compareMaps(map1, map2) {
-  if (map1.size !== map2.size) return false;
-  for (let [key, val] of map1) {
-    if (!map2.has(key) || map2.get(key) !== val) return false;
-  }
-  return true;
-}
-function solution(s, t) {
-  let answer = 0;
-  let sh = new Map();
-
+function checkAnagram(sum) {
   for (let x of t) {
     if (!sh.has(x)) {
       sh.set(x, 1);
+    } else {
+      sh.set(x, sh.get(x) + 1);
     }
   }
-  console.log(sh);
+
+  for (let x of a) {
+    if (!sh.has(x) || sh.get(x) != 0) {
+      answer = "NO";
+    } else {
+      sh.set(x, sh.get(x) - 1);
+    }
+  }
+}
+
+function solution(s, t) {
+  let answer = "YES";
+  let lt = 0;
+  let sum = "";
+
+  let sh = new Map();
+  let th = new Map();
+  let rt = 0;
+  for (let x of s) {
+    if (!sh.has(x)) {
+      sh.set(x, 1);
+    } else {
+      sh.set(x, sh.get(x) + 1);
+    }
+  }
+
+  for (let x of t) {
+    if (!th.has(x)) {
+      th.set(x, 1);
+    } else {
+      th.set(x, th.get(x) + 1);
+    }
+  }
+
+  console.log(th);
+
   return answer;
 }
 

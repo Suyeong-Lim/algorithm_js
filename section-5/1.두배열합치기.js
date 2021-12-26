@@ -1,7 +1,9 @@
 function solution(arr1, arr2) {
   let answer = [];
+
   let p1 = 0;
   let p2 = 0;
+
   let n = arr1.length;
   let m = arr2.length;
 
@@ -12,11 +14,9 @@ function solution(arr1, arr2) {
       answer.push(arr2[p2++]);
     }
   }
-
   while (p1 < n) {
     answer.push(arr1[p1++]);
   }
-
   while (p2 < m) {
     answer.push(arr2[p2++]);
   }

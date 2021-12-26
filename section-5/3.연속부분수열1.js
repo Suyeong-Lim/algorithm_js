@@ -1,8 +1,9 @@
 function solution(m, arr) {
   let answer = 0;
+
+  let n = arr.length;
   let lt = 0;
   let sum = 0;
-  let n = arr.length;
 
   for (let rt = 0; rt < n; rt++) {
     sum += arr[rt];
@@ -13,6 +14,7 @@ function solution(m, arr) {
       sum -= arr[lt++];
     }
   }
+
   return answer;
 }
 

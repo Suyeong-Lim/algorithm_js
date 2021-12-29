@@ -3,13 +3,11 @@ function solution(s) {
   let stack = [];
 
   for (let i = 0; i < s.length; i++) {
-    if (s[i] !== ")") {
-      stack.push(s[i]);
-    }
     if (s[i] === ")") {
       while (stack.pop() !== "(");
-    }
+    } else stack.push(s[i]);
   }
+  console.log(stack);
   answer = stack.join("");
 
   return answer;

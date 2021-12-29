@@ -3,9 +3,8 @@ function solution(k, arr) {
   let sum = 0;
 
   //먼저 3일동안의 매출을 계산해 놓고
-
-  for (let rt = 0; rt < k; rt++) {
-    sum += arr[rt];
+  for (let i = 0; i < k; i++) {
+    sum += arr[i];
   }
 
   //구해놓은 3일의 매출에서 인덱스를 증가 , 맨 좌측 인덱스는 합에서 삭제해가며 sum의 최대값을 찾아준다.

@@ -1,16 +1,16 @@
 function solution(a, b) {
   let answer = "";
-  let arr = [];
+
   for (let i = 0; i < a.length; i++) {
-    arr.push(a[i] - b[i]);
-    if (arr[i] === 1) {
+    if (a[i] - b[i] === 1) {
       answer += "A";
-    }
-    if (arr[i] === 2 || arr[i] === -1) {
+    } else if (a[i] - b[i] === 2 || a[i] - b[i] === -1) {
       answer += "B";
+    } else {
+      answer += "D";
     }
-    if (arr[i] === 0) answer += "D";
   }
+
   return answer;
 }
 

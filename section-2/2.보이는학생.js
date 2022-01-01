@@ -1,9 +1,10 @@
 function solution(arr) {
   let answer = 1;
-  let maxHeight = arr[0];
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > maxHeight) {
-      maxHeight = arr[i];
+  let max = Number.MIN_SAFE_INTEGER;
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > max) {
+      max = arr[i];
       answer++;
     }
   }

@@ -1,15 +1,16 @@
 function solution(arr) {
-  let arrLength = arr.length;
-  let answer = Array.from({ length: arrLength }, () => 1);
+  let answer = [];
 
-  for (let i = 0; i < arrLength; i++) {
-    for (let j = 0; j < arrLength; j++) {
-      console.log(i, j);
+  for (let i = 0; i < arr.length; i++) {
+    let num = 1;
+    for (let j = 0; j < arr.length; j++) {
       if (arr[i] < arr[j]) {
-        answer[i]++;
+        num++;
       }
     }
+    answer.push(num);
   }
+
   return answer;
 }
 

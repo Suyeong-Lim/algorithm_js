@@ -1,25 +1,24 @@
 function solution(s, t) {
-  let count = 1000;
-  let arr = [];
-  let n = s.length;
+  let answer = 1000;
+  let p = 1000;
 
-  for (let i = 0; i < n; i++) {
-    if (s[i] !== t) {
-      count++;
-      arr.push(count);
+  for (let x of s) {
+    if (x === t) {
+      p = 0;
+      answer.push(p);
     } else {
-      count = 0;
-      arr.push(count);
+      p++;
+      answer.push(p);
     }
   }
-
+  let n = s.length;
   for (let i = n; i >= 0; i--) {
     if (s[i] === t) {
-      count = 0;
+      p = 0;
       arr[i] = 0;
     } else {
-      count++;
-      arr[i] = Math.min(arr[i], count);
+      p++;
+      arr[i] = Math.min(arr[i], p);
     }
   }
 

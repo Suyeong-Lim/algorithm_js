@@ -1,8 +1,11 @@
 function solution(str) {
-  let answer = "";
-  //   s = str.replace(/[^0-9]/g, "");
-  //   answer = parseInt(s, 10);
 
+  //정규식
+  // answer = str.replace(/[^0-9]/g, "");
+  
+  let answer = 0;
+
+  //isNaN 숫자판별 함수 사용
   for (let x of str) {
     if (!isNaN(x)) {
       answer += x;

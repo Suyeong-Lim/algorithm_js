@@ -3,7 +3,6 @@
 function solution(arr) {
   let answer = 0;
   let n = arr.length;
-
   let dx = [-1, 0, 1, 0];
   let dy = [0, 1, 0, -1];
 

@@ -1,24 +1,29 @@
 function isPrime(num) {
-  if (num === 1) return false;
+  let flag = true;
+  if (num === 1) flag = false;
   for (let i = 2; i < parseInt(Math.sqrt(num)); i++) {
     if (num % i === 0) {
-      return false; //소수가 아님
+      flag = false;
+      break;
     }
   }
-  return true;
+
+  return flag;
 }
 
 function solution(arr) {
   let answer = [];
-  for (x of arr) {
-    let reverse = 0;
 
-    while (x) {
-      reverse *= 10;
-      reverse += x % 10;
-      x = parseInt(x / 10);
+  for (let i = 0; i < arr.length; i++) {
+    let temp = arr[i];
+    let result = 0;
+    while (temp) {
+      result *= 10;
+      result += temp % 10;
+      temp = parseInt(temp / 10);
     }
-    if (isPrime(reverse)) answer.push(reverse);
+
+    if (isPrime(result)) answer.push(result);
   }
 
   return answer;

@@ -6,9 +6,6 @@ function solution(arr) {
     count++;
     newArr.push(arr[i]);
   }
-  //console.log(newArr);
-  //   answer = count;
-  //   return answer;
 }
 
 let arr = [3, 1, 2, 3, 4];

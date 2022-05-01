@@ -24,3 +24,8 @@ let jewls = "z";
 let stones = "ZZ";
 
 console.log(solutions(jewls, stones));
+
+//2
+var numJewelsInStones = function (jewels, stones) {
+  return [...stones].filter((stone) => jewels.includes(stone)).length;
+};
